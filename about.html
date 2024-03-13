@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Web Design & Development Course</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+        }
+
+        header {
+    background-image: url('4tos/32.jpg');
+    background-size: cover; 
+    color: navy; 
+    text-align: center; 
+    padding: 70px ; 
+}
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('4tos/72.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; 
+    z-index: -1; 
+}
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .about-content {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: red;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            color: #110101;
+            margin-bottom: 2rem;
+        }
+
+        .instructor-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .instructor-info img {
+            border-radius: 50%;
+            margin-right: 2rem;
+            width: 150px;
+            height: 150px;
+            border: 4px solid #c50808;
+            animation: rotate 10s infinite linear;
+        }
+
+        .instructor-details {
+            text-align: left;
+        }o;
+
+        .course-curriculum {
+            margin-top: 3rem;
+            text-align: left;
+        }
+        @keyframes flip-horizontal {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(-1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes flip-vertical {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(-1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.instructor-info img.flipping-image {
+    animation: flip-horizontal 2s ease-in-out infinite, flip-vertical 2s ease-in-out infinite;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <header>
+        <div class="container">
+            <h1 style="font-family: 'Times New Roman;">Web Design & Development Course</h1>
+        </div>
+    </header>
+
+    <div class="container about-content">
+        <h2 >About Our Web Design & Development Course</h2>
+        <p>Welcome to our vibrant and creative Web Design & Development course! Join us on a journey where innovation meets imagination, and where you'll learn to craft digital experiences that leave a lasting impression.</p>
+
+        <div class="instructor-info">
+            <img src="4tos/9.jpg  " alt="" class="flipping-image">
+            
+            <div class="instructor-details">
+           
+        
+                <h3>Meet Our Lead Instructor - Prof.S.KUMARA</h3>
+                <p>Prof.S.KUMARA is not just an instructor; He's a digital wizard with a passion for teaching. With a background in creating award-winning websites, He brings real-world expertise to our classroom. Get ready to be inspired!</p>
+            </div>
+        </div>
+
+        <div class="course-curriculum">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>Master HTML, CSS, and JavaScript with hands-on projects.</li>
+                <li>Create responsive and visually stunning web designs.</li>
+                <li>Explore the latest frameworks and tools in the industry.</li>
+                <li>Collaborate on real client projects to enhance your skills.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 2rem 0;">
+            <p>&copy; 2023 Web Design & Development Course.21CIS0011. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

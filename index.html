@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>practical 1</title>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                
+                <div class="menu">
+                    <ul>
+                        <li><a href="home.html" >HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="service.html">SERVICE</a></li>
+                        <li><a href="design.html">DESIGN</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+ 
+                    </ul>
+                </div>
+
+                <div class="search">
+                    <input class="srch" type="search" name="search" id="searchInput" placeholder="type to text">
+                    <button class="btn"> <a href="#" onclick="performSearch()"> Search</a></button>
+                </div>
+                <script>
+                    function performSearch() {
+                        
+                        var searchTerm = document.getElementById("searchInput").value;
+            
+                       
+                        alert("Searching for: " + searchTerm);
+                        
+                        
+                    }
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1 style="font-family: 'Times New Roman;">Welcome To Web Design & Development<br>course</h1>
+        <p class="par"> <span style="color: rgb(1, 1, 8)"> <b>web design focuses on the visual and user experience aspects of a website,<br>
+            while web development involves both the technical implementation of the design 
+            and the creation of <br>functional features that make the website interactive <br>and dynamic.
+            Both design and development are crucial for creating successful and effective websites.</b></span></p>
+
+            <button class="cn"><a href="home.html">JOIN US</a></button>
+            
+
+            <div class="form">
+                <h2>LOGIN HERE</h2>
+        <input type="email" id="email" name="email" placeholder="Enter Email Here">
+        <input type="password" id="password" name="password" placeholder="Enter password Here">
+        <button class="btnn" onclick="login()">Login</button>
+        <div id="error-message"></div>
+
+                <p class="link" style="color: chartreuse;">Don't have an account <br>
+                <a href="signup.html"><span style="color: aliceblue;" >SIGN UP</a> HERE</span>
+                <a style="color: yellow;" href="forget_password.html">Forgot Password?</a>
+            
+                <p class="liw"></p><span style="color: aliceblue;">Log in with </span></p>
+
+                <div class="icon">
+                    <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://google.com" target="_blank"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="https://twittercom" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://skype.com" target="_blank"><ion-icon name="logo-skype"></ion-icon></a>
+                    <a href="https://linkedin.com" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    
+                </div>
+            </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js" defer></script>
+
+    <script>
+        function login() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            
+            if (email === "example@example.com" && password === "password") {
+                window.location.href = "another-page.html";
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+        }
+    </script>
+
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 2rem 0;">
+            <p>&copy; 2023 Web Design & Development Course.21CIS0011. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

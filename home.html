@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design & Development Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+    background-image: url('4tos/22.png');
+    background-size: cover; 
+    color: navy; 
+    text-align: center; 
+    padding: 80px 0; 
+}
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('4tos/71.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; 
+    z-index: -1; 
+}
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+           
+        }
+
+        .main-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color:blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .enroll-form {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .enroll-input {
+            padding: 0.5rem;
+            margin-right: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .enroll-submit {
+            padding: 0.5rem 2rem;
+            background-color: palegreen;
+            color: red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .enroll-submit:hover {
+            background-color: aqua;
+        }
+        img {
+            display: block;
+            margin: auto;
+            margin-top: 2rem;
+            max-width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <header>
+        <div class="container">
+            <h1 style="font-family: 'Times New Roman;">Unlock Your Web Development Potential</h1>
+            <p>Join Our Web Design & Development Course Today!</p>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <h2>Why Choose Our Course?</h2>
+        <p>Our Web Design & Development course empowers you to create interactive and visually appealing websites. Here's what you'll learn:</p>
+        <ul>
+            <li>Master HTML, CSS, and JavaScript.</li>
+            <li>Create responsive and user-friendly web interfaces.</li>
+            <li>Explore modern web development frameworks and tools.</li>
+            <li>Collaborate with industry professionals on real projects.</li>
+        </ul>
+        <a href="#enroll" class="cta-button">Enroll Now</a>
+
+    
+
+        <div class="enroll-form" id="enroll">
+            <input type="text" class="enroll-input" placeholder="Your Name">
+            <input type="email" class="enroll-input" placeholder="Your Email">
+            <button class="enroll-submit" onclick="submitForm()">Enroll</button>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            alert('Thank you for enrolling in our course! We will contact you shortly.');
+        }
+    </script>
+    </div>
+
+    
+    <img src="4tos/20.webp" alt="Web Design & Development Certificate">
+</div>
+
+<footer>
+    <div class="container" style="text-align: center; padding: 2rem 0;">
+        <p>&copy; 2023 Web Design & Development Course.21CIS0011. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+
+</html>

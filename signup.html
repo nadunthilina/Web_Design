@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h2 style="font-family: 'Times New Roman;">User Signup</h2>
+        <form id="signupForm">
+            Username:
+            <input type="text" id="username" name="username" required><br>
+            
+            Email Address:
+            <input type="email" id="email" name="email" required><br>
+            
+            Phone Number:
+            <input type="tel" id="tpno" name="tpno" required><br>
+
+            Address:
+            <input type="text" id="address" name="address" required><br>
+            
+            Password:
+            <input type="password" id="password" name="password" required><br>
+            
+            Confirm Password:
+            <input type="password" id="confirm_password" name="confirm_password" required><br>
+            
+            
+            
+            <button type="submit" style="font-family: 'Times New Roman;">Sign Up</button>
+        </form>
+        <div class="error-message" id="error-message"></div>
+        <a href="index.html">Already have an account? Login</a>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var tpno = document.getElementById("tpno").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm_password").value;
+            var address = document.getElementById("address").value;
+            var errorMessage = document.getElementById("error-message");
+
+            
+            if (password === confirmPassword) {
+                
+                localStorage.setItem("email", email);
+                localStorage.setItem("password", password);
+
+                
+                window.location.href = "welcome.html";
+            } else {
+                errorMessage.textContent = "Passwords do not match. Please try again.";
+            }
+        });
+    </script>
+</body>
+</html>

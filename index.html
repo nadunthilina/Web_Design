@@ -79,17 +79,22 @@
     <script src="script.js" defer></script>
 
     <script>
-        function login() {
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-
+        document.getElementById("login-btn").addEventListener("click", function(event) {
+            event.preventDefault(); 
             
-            if (email === "example@example.com" && password === "password") {
-                window.location.href = "another-page.html";
+            var username = document.getElementById("login-username").value;
+            var password = document.getElementById("login-password").value;
+            var errorMessage = document.getElementById("login-error-message");
+            var users = JSON.parse(localStorage.getItem("users")) || [];
+
+            var validUser = users.find(user => user.username === username && user.password === password);
+
+            if (validUser) {
+                window.location.href = "useracc.html";
             } else {
-                alert("Invalid credentials. Please try again.");
+                errorMessage.textContent = "Invalid username or password. Please try again.";
             }
-        }
+        });
     </script>
 
 

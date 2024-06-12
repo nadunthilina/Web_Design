@@ -9,7 +9,7 @@
 <body>
     
     <div class="container">
-        <h2 style="font-family: 'Times New Roman;">User Signup</h2>
+        <h2>User Signup</h2>
         <form id="signupForm">
             Username:
             <input type="text" id="username" name="username" required><br>
@@ -29,11 +29,11 @@
             Confirm Password:
             <input type="password" id="confirm_password" name="confirm_password" required><br>
             
-            
-            
-            <button type="submit" style="font-family: 'Times New Roman;">Sign Up</button>
+            <button type="submit">Sign Up</button>
         </form>
         <div class="error-message" id="error-message"></div>
+        
+        <br>
         <a href="index.html">Already have an account? Login</a>
     </div>
 
@@ -49,13 +49,15 @@
             var address = document.getElementById("address").value;
             var errorMessage = document.getElementById("error-message");
 
-            
             if (password === confirmPassword) {
-                
+                // Store username, email, and password in localStorage
+                localStorage.setItem("username", username);
                 localStorage.setItem("email", email);
                 localStorage.setItem("password", password);
+                localStorage.setItem("address", address);
+                localStorage.setItem("tpno", tpno);
 
-                
+                // Redirect to welcome page
                 window.location.href = "welcome.html";
             } else {
                 errorMessage.textContent = "Passwords do not match. Please try again.";
